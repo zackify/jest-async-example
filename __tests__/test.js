@@ -1,4 +1,8 @@
-const tests = require('../index');
+const tests = [];
+
+require('fs')
+  .readdirSync(require('path').join(__dirname, '../custom'))
+  .forEach(file => tests.push(require(`../custom/${file}`)));
 
 describe('blah', () => {
   for (let test of tests) {
