@@ -1,6 +1,6 @@
 module.exports = {
   name: 'gets the title',
-  run: async () => {
+  run: async url => {
     return true;
   },
 };
